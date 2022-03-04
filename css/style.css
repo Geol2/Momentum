@@ -4,10 +4,7 @@
 }
 
 body {
-	/* 중앙 정렬 */
-	/* display: flex;
-	justify-content: center;
-	align-items: center;*/
+	min-width: 1400px;
 	background-color: #f7f1e3;
 }
 
@@ -156,7 +153,7 @@ body {
 .container {
 	background-color: #d1ccc0;
 	height: 240px;
-	width: 500px;
+	width: 375px;
 	margin: 30px;
 
 	border-radius: 3px 3px 3px 3px;
@@ -167,7 +164,7 @@ body {
 	display: flex;
 	flex-direction: row;
 
-	width: 500px;
+	width: 375px;
 	height: 30px;
 	background-color: #aaa69d;
 
@@ -180,9 +177,9 @@ body {
 
 body #clock {
 	background-color: #aaa69d;
-	font-size: 100px;
+	font-size: 75px;
 	height: 100px;
-	width: 410px;
+	width: 290px;
 	padding: 20px;
 	margin: 20px;
 
@@ -191,7 +188,7 @@ body #clock {
 
 .todo {
 	height: 100px;
-	width: 500px;
+	width: 375px;
 }
 
 #top {
@@ -255,10 +252,22 @@ body #clock {
 	border-bottom: 5px solid #ff5252;
 }
 
-.row {
+.flex {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.row {
 	flex-direction: row;
-	font-family: "squre_sans_serif_7";
+}
+
+.row_reverse {
+	flex-direction: row-reverse;
+}
+
+.col {
+	flex-direction: column;
 }
 
 .colon {
@@ -266,30 +275,34 @@ body #clock {
 }
 
 .hour {
-	font-size: 80px;
+	font-size: 53px;
 
-	height: 90px;
-	width: 130px;
+	height: 50px;
+	width: 50px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
 }
 
 .minute {
-	font-size: 80px;
+	font-size: 53px;
 
-	height: 90px;
-	width: 130px;
+	height: 50px;
+	width: 50px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
 }
 
 .second {
-	font-size: 80px;
+	font-size: 53px;
 
-	height: 90px;
-	width: 130px;
+	height: 50px;
+	width: 50px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
+}
+
+.w50 {
+	width: 80px;
 }
 
 .start {
