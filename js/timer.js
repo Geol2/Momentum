@@ -19,11 +19,26 @@ function stopTimer() {
 }
 
 function initTimer() {
-	hour.innerHTML = hour_range.value;
-	minute.innerHTML = min_range.value;
-	second.innerHTML = sec_range.value;
+	hour.value = hour_range.value.padStart(2, 0);
+	minute.value = min_range.value.padStart(2, 0);
+	second.value = sec_range.value.padStart(2, 0);
 }
 
-initTimer();
+function updateHour() {
+	let range = hour_range.value.padStart(2, 0); 
+	hour.value = range;
+}
 
-hour_range.addEventListener("", updateHour);
+function updateMinute() {
+	minute.value = min_range.value.padStart(2, 0);
+}
+
+function updateSecond() {
+	second.value = sec_range.value.padStart(2, 0);
+}
+
+hour_range.addEventListener("input", updateHour);
+min_range.addEventListener("input", updateMinute);
+sec_range.addEventListener("input", updateSecond);
+
+initTimer();

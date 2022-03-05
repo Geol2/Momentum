@@ -48,6 +48,10 @@ body {
 	margin: 10px;
 }
 
+.m30 {
+	margin: 30px;
+}
+
 .ml5 {
 	margin-left: 5px;
 }
@@ -173,15 +177,18 @@ body {
 
 .bg {
 	background-color: #aaa69d;
+
+	border-radius: 2px 2px 2px 2px;
 }
 
-body #clock {
+#clock {
 	background-color: #aaa69d;
 	font-size: 75px;
 	height: 100px;
-	width: 290px;
-	padding: 20px;
-	margin: 20px;
+	width: 320px;
+	
+	text-align: center;
+	line-height: 100px;
 
 	border-radius: 5px 5px 5px 5px;
 }
@@ -271,32 +278,38 @@ body #clock {
 }
 
 .colon {
-	font-size: 80px;
+	font-size: 60px;
 }
 
 .hour {
-	font-size: 53px;
+	font-size: 45px;
 
 	height: 50px;
-	width: 50px;
+	width: 75px;
+	
+	border: 0px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
 }
 
 .minute {
-	font-size: 53px;
+	font-size: 45px;
 
 	height: 50px;
-	width: 50px;
+	width: 75px;
+
+	border: 0px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
 }
 
 .second {
-	font-size: 53px;
+	font-size: 45px;
 
 	height: 50px;
-	width: 50px;
+	width: 75px;
+
+	border: 0px;
 	border-radius: 5px 5px 5px 5px;
 	font-family: "squre_sans_serif_7";
 }
@@ -307,4 +320,37 @@ body #clock {
 
 .start {
 	float: right;
+}
+
+.btn {
+	width: 70px;
+	height: 50px;
+	border: 0px;
+	border-radius: 2px 2px 2px 2px;
+
+	box-shadow: 1px 1px 5px gray;
+}
+
+.btn:hover {
+	cursor: pointer;
+}
+
+.peterRiver {
+	background-color: #3498db;
+}
+
+.emerald {
+	background-color: #2ecc71;
+}
+
+.alizarin {
+	background-color: #e74c3c;
+}
+
+.white {
+	color: white;
+}
+
+.fs20 {
+	font-size: 18px;
 }
