@@ -6,7 +6,7 @@ selectClock.after(div);
 
 function getCurrentDay() {
 	const date = new Date();
-	hourToString = date.toString();
+	let hourToString = date.toString();
 	hourToString = hourToString.substr(16, 8);
 
 	selectClock.innerHTML = hourToString;

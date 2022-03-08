@@ -37,8 +37,24 @@ function updateSecond() {
 	second.value = sec_range.value.padStart(2, 0);
 }
 
+function updateHourRange() {
+	hour_range.value = hour.value;
+}
+
+function updateMinRange() {
+	min_range.value = minute.value;
+}
+
+function updateSecRange() {
+	sec_range.value = second.value;
+}
+
 hour_range.addEventListener("input", updateHour);
 min_range.addEventListener("input", updateMinute);
 sec_range.addEventListener("input", updateSecond);
+
+hour.addEventListener("input", updateHourRange);
+minute.addEventListener("input", updateMinRange);
+second.addEventListener("input", updateSecRange);
 
 initTimer();
