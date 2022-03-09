@@ -6,8 +6,13 @@ const hour_range = document.getElementById("range_hour");
 const min_range = document.getElementById("range_min");
 const sec_range = document.getElementById("range_sec");
 
+const start = document.getElementById("startTimer");
+
 function startTimer() {
-	console.log(1);
+	console.log(hour.value);
+    console.log(minute.value);
+    console.log(second.value);
+    
 }
 
 function pauseTimer() {
@@ -56,5 +61,7 @@ sec_range.addEventListener("input", updateSecond);
 hour.addEventListener("input", updateHourRange);
 minute.addEventListener("input", updateMinRange);
 second.addEventListener("input", updateSecRange);
+
+start.addEventListener("click", startTimer);
 
 initTimer();
