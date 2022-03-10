@@ -272,8 +272,7 @@ body {
 	padding: 10px;
 }
 
-#footer {
-	position: absolute;
+footer {
 	bottom: 0;
 }
 

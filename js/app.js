@@ -1,6 +1,6 @@
 const set = document.getElementById("set");
 const idOfMenu = document.getElementById("menu");
-const setting = document.getElementsByClassName("setting mb10");
+const setting = document.getElementsByClassName("setting");
 const classOfMenu = document.getElementsByClassName("setting mb600");
 
 const closeWin = document.getElementsByClassName("red m8 ml5 mr5");
