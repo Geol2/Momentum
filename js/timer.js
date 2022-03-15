@@ -1,6 +1,6 @@
-const hour = document.getElementById("hour");
-const minute = document.getElementById("minute");
-const second = document.getElementById("second");
+let hour = document.getElementById("hour");
+let minute = document.getElementById("minute");
+let second = document.getElementById("second");
 
 const hour_range = document.getElementById("range_hour");
 const min_range = document.getElementById("range_min");
@@ -8,11 +8,25 @@ const sec_range = document.getElementById("range_sec");
 
 const start = document.getElementById("startTimer");
 
+let nIntervalId;
+
 function startTimer() {
-	console.log(hour.value);
-    console.log(minute.value);
-    console.log(second.value);
-    
+	let timer_second = second.value;
+
+	console.log( hour.value );
+    console.log( minute.value );
+    console.log( second.value );
+	
+	nIntervalId = setInterval(function() {
+		if(timer_second === 1) {
+			clearInterval(nIntervalId);
+		}
+
+		timer_second -= 1;
+		console.log( timer_second );
+		second.value = timer_second;
+	}, 1000);
+
 }
 
 function pauseTimer() {
@@ -21,12 +35,6 @@ function pauseTimer() {
 
 function stopTimer() {
 	console.log(3);
-}
-
-function initTimer() {
-	hour.value = hour_range.value.padStart(2, 0);
-	minute.value = min_range.value.padStart(2, 0);
-	second.value = sec_range.value.padStart(2, 0);
 }
 
 function updateHour() {
@@ -52,6 +60,12 @@ function updateMinRange() {
 
 function updateSecRange() {
 	sec_range.value = second.value;
+}
+
+function initTimer() {
+	hour.value = hour_range.value.padStart(2, 0);
+	minute.value = min_range.value.padStart(2, 0);
+	second.value = sec_range.value.padStart(2, 0);
 }
 
 hour_range.addEventListener("input", updateHour);
