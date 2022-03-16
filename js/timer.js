@@ -2,31 +2,47 @@ let hour = document.getElementById("hour");
 let minute = document.getElementById("minute");
 let second = document.getElementById("second");
 
-const hour_range = document.getElementById("range_hour");
-const min_range = document.getElementById("range_min");
-const sec_range = document.getElementById("range_sec");
+let hour_range = document.getElementById("range_hour");
+let min_range = document.getElementById("range_min");
+let sec_range = document.getElementById("range_sec");
 
 const start = document.getElementById("startTimer");
 
 let nIntervalId;
 
 function startTimer() {
+	let timer_hour = hour.value;
+	let timer_minute = minute.value;
 	let timer_second = second.value;
 
-	console.log( hour.value );
-    console.log( minute.value );
-    console.log( second.value );
-	
-	nIntervalId = setInterval(function() {
-		if(timer_second === 1) {
+	timer_hour = Number(timer_hour);
+	timer_minute = Number(timer_minute);
+	timer_second = Number(timer_second);
+
+	console.log(Number(timer_hour));
+	console.log(Number(timer_minute));
+	console.log(Number(timer_second));
+
+	nIntervalId = setInterval(function () {
+		if (
+			Number(timer_hour) === 0 &&
+			Number(timer_minute) === 0 &&
+			Number(timer_second) === 0
+		) {
 			clearInterval(nIntervalId);
+			return 0;
+		}
+		if (Number(timer_second) === 0) {
+			timer_second = 60;
+			timer_minute = timer_minute - 1;
+			minute.value = timer_minute.toString().padStart(2, 0);
+			min_range.value = timer_minute;
 		}
 
 		timer_second -= 1;
-		console.log( timer_second );
-		second.value = timer_second;
+		second.value = timer_second.toString().padStart(2, 0);
+		sec_range.value = timer_second;
 	}, 1000);
-
 }
 
 function pauseTimer() {
@@ -38,7 +54,7 @@ function stopTimer() {
 }
 
 function updateHour() {
-	let range = hour_range.value.padStart(2, 0); 
+	let range = hour_range.value.padStart(2, 0);
 	hour.value = range;
 }
 
