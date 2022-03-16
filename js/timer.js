@@ -44,7 +44,7 @@ function startTimer() {
 			sec_range.value = timer_second;
 		} else if (timer_hour === 0 && timer_minute !== 0) {
 			// 시간X, 분 세팅
-			if (timer_minute === 0) {
+			if (timer_minute < 0) {
 				timer_second = 59;
 			} else {
 				timer_second -= 1;
