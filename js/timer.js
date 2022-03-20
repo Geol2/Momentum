@@ -30,7 +30,7 @@ function startTimer() {
 			return 0;
 		}
 
-		if (timer_hour !== 0) {
+		if (timer_hour !== 0 && timer_minute == 0 && timer_second == 0) {
 			// 시간이 세팅됨
 			timer_hour -= 1;
 
@@ -42,6 +42,14 @@ function startTimer() {
 			}
 
 			sec_range.value = timer_second;
+		} else if (timer_hour !== 0 && timer_minute === 0 && timer_second !== 0 ) {
+			// 시간 O, 분 X, 초 O
+			if(timer_second < 0) {
+				timer_minute -= 1;
+			} else {
+				timer_second -= 1;
+			}
+
 		} else if (timer_hour === 0 && timer_minute !== 0) {
 			// 시간X, 분 세팅
 			if (timer_minute < 0) {
