@@ -65,6 +65,16 @@ function startTimer() {
 		} else if (timer_hour === 0 && timer_minute === 0 && timer_second !== 0) {
 			// 초만 세팅
 			timer_second -= 1;
+
+		} else if (timer_hour !== 0 && timer_minute !== 0 && timer_second === 0) {
+			// 시, 분 세팅
+			if( timer_second <= 0 ) {
+				timer_minute -= 1;
+				timer_second = 59;
+			}
+
+		} else if(timer_hour !== 0 && timer_minute !== 0 && timer_second !== 0) {
+			timer_second -= 1;
 		} else {
 			// 알 수 없음.
 			alert("알 수 없는 조건입니다. 관리자에게 문의해주세요.");
