@@ -276,7 +276,7 @@ footer {
 	bottom: 0;
 }
 
-#todo {
+#todo_input {
 	border: 0px;
 	background: #d1ccc0;
 	font-size: 20px;
@@ -285,7 +285,7 @@ footer {
 	line-height: 2;
 }
 
-#todo:focus {
+#todo_input:focus {
 	border-bottom: 5px solid #ff5252;
 }
 
