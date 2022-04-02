@@ -22,7 +22,7 @@
 
         <!-- 상단 바 -->
         <div id="top">
-            <div class="ml5" id="top_name">momentum... </div>
+            <div class="ml5" id="top_name"></div>
         </div>
 
         <div class="container_main">
@@ -114,7 +114,7 @@
 
                     <div>
                         <form id="todo_form" action="" method="post" >
-                            <input type="text" class="ml5 mt20" id="todo_input" value="" placeholder=" 할 일을 입력해주세요." required>
+                            <input type="text" class="ml5 mt20" id="common_input" value="" placeholder=" 할 일을 입력해주세요." required>
                         </form>
                     </div>
 
@@ -179,15 +179,44 @@
                 </div>
             </div>
         </div>
+        
+
         <footer>
             <div class="text">
                 < Copyright 2022.geol.All rights reserverd. >
             </div>
         </footer>
+
+        <div id="background" class="background">
+            <div class="window">
+                <div class="popup">
+                    <div class="index">
+                        <div class="red m8 ml5 mr5"></div>
+                        <div class="yellow m8 ml5 mr5"></div>
+                        <div class="green m8 ml5 mr5"></div>
+
+                        <div class="text m5 ml5 mr5"> 로그인 </div>
+                    </div>
+                    
+                    <div class="flex col mt20">
+                        <form method="post" action="">
+                            <input type="text" id="common_input" value="" placeholder="이름">
+                        </form>
+                    </div>
+                    <div class="flex row">
+                        <button class="btn peterRiver white fs20 m10" id="loginBtn"> 로그인 </button>
+                        <button class="btn alizarin white fs20 m10" id="close">닫기</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
         <script type="module" src="./js/app.js"> </script>
         <script type="module" src="./js/clock.js"> </script>
         <script type="module" src="./js/timer.js"> </script>
         <script type="module" src="./js/login.js"> </script>
         <script type="module" src="./js/todo.js"> </script>
+    
     </body>
 </html>

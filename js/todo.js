@@ -21,12 +21,8 @@ function deleteToDo(event) {
     li.remove();
 
     toDos = toDos.filter( item => {
-        console.log(item.id);
-        console.log(parseInt(li.id));
-        
         return item.id !== parseInt(li.id)
     });
-    console.log(toDos);
 
     saveToDos();
 }
