@@ -16,6 +16,10 @@
         <!-- google font -->
         <link rel="preconnect" href="https://fonts.gstatic.com">
 	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     </head>
 
     <body>
@@ -96,7 +100,33 @@
                         <div class="yellow m8 ml5 mr5"></div>
                         <div class="green m8 ml5 mr5"></div>
 
-                        <div class="text m5 ml5 mr5">슬라이드 영역</div>
+                        <div class="text m5 ml5 mr5"><!-- 이미지 영역 --></div>
+                    </div>
+
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"> 
+                                <img src="/images/slider_imgs/nogulman_1.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/slider_imgs/nogulman_2.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/slider_imgs/nogulman_3.jpeg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="/images/slider_imgs/nogulman_4.jpeg" alt="">
+                            </div>
+                        </div>
+                        
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <div class="swiper-scrollbar"></div>
                     </div>
                 </div>
             </div>
@@ -144,6 +174,18 @@
 
                         <div class="text m5 ml5 mr5"> 주요 검색 링크 </div>
                     </div>
+
+                    <div class="setting m30">
+                        <a href="https://stackoverflow.com/" target="_blank">
+                            <img class="logo" src="/images/ico/sof_color.ico">
+                        </a>
+                    </div>
+
+                    <div class="setting m30">
+                        <a href="https://google.co.kr/" target="_blank">
+                            <img class="logo" src="/images/ico/google.ico">
+                        </a>
+                    </div>
                 </div>
 
                 <div class="container">
@@ -182,7 +224,7 @@
         
 
         <footer>
-            <div class="text">
+            <div class="text" style="height: 100px;">
                 < Copyright 2022.geol.All rights reserverd. >
             </div>
         </footer>
@@ -217,6 +259,25 @@
         <script type="module" src="./js/timer.js"> </script>
         <script type="module" src="./js/login.js"> </script>
         <script type="module" src="./js/todo.js"> </script>
-    
+        <script type="module">
+            import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
+
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                    type: "progressbar",
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }
+            });
+        </script>
     </body>
 </html>

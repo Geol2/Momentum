@@ -432,3 +432,19 @@ footer {
 	transform: translate(-50%, -50%);
 	transition: all .5s;
 }
+
+.swiper {
+    width: 350px;
+    height: 200px;
+}
+
+img {
+    width: 350px;
+    height: 200px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    margin: 8px;
+}
