@@ -310,7 +310,7 @@
 
 @media all and (max-width: 730px) {
 	body {
-		min-width: 530px;
+		min-width: 350px;
 		background-color: #f7f1e3;
 	}
 
