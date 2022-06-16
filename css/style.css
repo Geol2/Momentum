@@ -1,4 +1,4 @@
-@media screen and (min-width: 1920px) {
+@media all and (min-width: 1280px) {
 
 	body {
 		min-width: 1400px;
@@ -308,7 +308,7 @@
 	}
 }
 
-@media screen and (max-width: 530px) {
+@media all and (max-width: 730px) {
 	body {
 		min-width: 530px;
 		background-color: #f7f1e3;
