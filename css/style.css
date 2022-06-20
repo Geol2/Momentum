@@ -308,7 +308,7 @@
 	}
 }
 
-@media all and (max-width: 730px) {
+@media all and (max-width: 1279px) {
 	body {
 		min-width: 350px;
 		background-color: #f7f1e3;
